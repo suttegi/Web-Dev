@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    a{
+        cursor: pointer;
+    }
+}
+
+.login {
+    padding: 25px;
+    margin: auto;
+    max-width: 950px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.login-container {
+    flex: 1;
+    padding: 0 15px;
+}
+
+.phone-cascade{
+    position: relative;
+}
+.screenshots{
+    position: absolute;
+    left: 680px;
+    top: 186px;
+    img{
+        position: absolute;
+        animation: slide 9s infinite;
+    }
+}
+.screenshots img:nth-child(1) {
+    animation-delay: 0s;
+}
+.screenshots img:nth-child(2) {
+    animation-delay: 3s;
+}
+.screenshots img:nth-child(3) {
+    animation-delay: 6s;
+}
+@keyframes slide {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+
+.login-container-form {
+    border: 1px solid #ccc;
+    padding: 25px 35px 15px;
+    img {
+        width: 190px;
+        height: 74px;
+        background-size: 176px 186px;
+        margin-bottom: 25px;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    form{
+        display: flex;
+        flex-direction: column;
+        input{
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            box-shadow: none;
+            margin: 5px 0;
+        }
+        button{
+            background-color: #2196f3;
+            width: 100%;
+            padding: 10px;
+            color: white;
+            border: none;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+    }
+}
+.separator{
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    opacity: 0.5;
+    hr {
+        margin: 0;
+        flex: 1;
+    }
+    span{
+        margin: 0 15px;
+    }
+}
+
+
+.quick-links  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a{
+        color: #2196f3;
+        text-decoration: none;
+        display: block;
+    }
+    .forgot-pass-link{
+        color: black;
+        font-size: 12px;
+        margin-top: 25px;
+    }
+}
+.sign-up{
+    border: 1px solid #ccc;
+    padding: 25px 35px 15px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    a{
+        color: #2196f3;
+        text-decoration: none;
+    }
+    margin-top: 10px;
+}
+
+.get-app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div{
+        display: flex;
+        flex-direction: row;
+        img{
+            height: 45px;
+            margin-right: 0.2rem;
+            padding-bottom: 1px;
+        }
+    }
+}
+
