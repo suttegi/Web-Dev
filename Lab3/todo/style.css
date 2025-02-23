@@ -34,7 +34,7 @@ main {
     gap: 10px;
 
     textarea {
-        width: 100%;
+        width: 90%;
         padding: 10px;
         border-radius: 5px;
         border: 1px solid #ccc;
@@ -43,6 +43,8 @@ main {
     button {
         padding: 10px;
         background-color: black;
+        width: 10%;
+        font-size: 32px;
         color: white;
         border: none;
         border-radius: 5px;

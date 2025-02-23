@@ -3,24 +3,31 @@ const handleAddTask = () => {
     const taskInput = document.querySelector("textarea");
 
     if (taskContainer && taskInput.value.trim() !== "") {
-        const newTask = document.createElement("li");
-        newTask.classList.add("task-item");
+        if(taskInput.value.includes("_")) {
+            alert("введите без спешл символов пж")
+            
+        }
+        else{
+            const newTask = document.createElement("li");
+            newTask.classList.add("task-item");
+    
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.classList.add("isDone");
+    
+            const taskText = document.createElement("span");
+            taskText.textContent = taskInput.value;
+    
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "del";
+            deleteButton.classList.add("delete-task");
+            deleteButton.onclick = () => newTask.remove();
+    
+            newTask.append(checkbox, taskText, deleteButton);
+            taskContainer.appendChild(newTask);
+            taskInput.value = "";
 
-        const checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
-        checkbox.classList.add("isDone");
-
-        const taskText = document.createElement("span");
-        taskText.textContent = taskInput.value;
-
-        const deleteButton = document.createElement("button");
-        deleteButton.textContent = "del";
-        deleteButton.classList.add("delete-task");
-        deleteButton.onclick = () => newTask.remove();
-
-        newTask.append(checkbox, taskText, deleteButton);
-        taskContainer.appendChild(newTask);
-        taskInput.value = "";
+        }
     }
 };
 
